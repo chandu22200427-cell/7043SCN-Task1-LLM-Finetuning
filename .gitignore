@@ -16,10 +16,12 @@ models/
 *.safetensors
 *.bin
 
-# Data and generated outputs
+# Datasets and temporary logs
 data/
-results/
 logs/
+
+# Keep results tracked in Git
+# results/
 
 # Editor and OS files
 .vscode/

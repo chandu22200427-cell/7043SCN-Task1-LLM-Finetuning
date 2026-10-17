@@ -1,0 +1,4 @@
+method,model,trainable_parameters,trainable_percentage,epochs,training_minutes,validation_loss,test_accuracy,test_macro_f1,invalid_predictions
+Pretrained baseline,Qwen/Qwen2.5-0.5B-Instruct,494032768,100.0,0,0.0,,0.2146,0.2067,816
+LoRA fine-tuning,Qwen/Qwen2.5-0.5B-Instruct,1081344,0.2184,1,22.85,0.140396,0.776,0.7794,86
+Full fine-tuning,Qwen/Qwen2.5-0.5B-Instruct,494032768,100.0,1,35.95,0.058357,0.9169,0.9171,42

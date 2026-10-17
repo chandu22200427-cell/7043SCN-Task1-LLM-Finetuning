@@ -1,0 +1,2 @@
+model,method,test_examples,accuracy,macro_f1,invalid_predictions,evaluation_minutes
+Qwen/Qwen2.5-0.5B-Instruct,Full fine-tuning,3080,0.9168831168831169,0.9171462023685736,42,9.632622985045115

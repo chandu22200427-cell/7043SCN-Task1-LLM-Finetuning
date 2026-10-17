@@ -1,0 +1,2 @@
+model,method,test_examples,accuracy,macro_f1,invalid_predictions,evaluation_minutes
+Qwen/Qwen2.5-0.5B-Instruct,LoRA,3080,0.775974025974026,0.7794427125295941,86,15.309964732329052

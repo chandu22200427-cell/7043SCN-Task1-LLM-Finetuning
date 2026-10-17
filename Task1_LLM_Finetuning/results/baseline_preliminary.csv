@@ -1,0 +1,2 @@
+model,evaluation,number_of_examples,correct_predictions,accuracy,macro_f1
+Qwen/Qwen2.5-0.5B-Instruct,preliminary_77_examples,77,19,0.24675324675324675,0.18484848484848485

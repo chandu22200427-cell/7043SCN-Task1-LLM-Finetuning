@@ -1,0 +1,2 @@
+model,evaluation,test_examples,accuracy,macro_f1,runtime_minutes
+Qwen/Qwen2.5-0.5B-Instruct,full_test_set,3080,0.2146103896103896,0.20667669411974912,8.333578503131866
