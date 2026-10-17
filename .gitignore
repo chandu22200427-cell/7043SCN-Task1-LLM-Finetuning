@@ -1,16 +1,14 @@
-
-# Python environment and cache
+# Python environments and cache
 .venv/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 
-# Secrets and local configuration
+# Secrets
 .env
 .env.*
-!.env.example
 
-# Model checkpoints and downloaded models
+# Model checkpoints
 checkpoints/
 models/
 *.pt
@@ -18,15 +16,16 @@ models/
 *.safetensors
 *.bin
 
-# Datasets and generated outputs
+# Data and generated outputs
 data/
 results/
 logs/
 
-# Editor and operating system files
+# Editor and OS files
 .vscode/
 .DS_Store
 Thumbs.db
-# Microsoft Office temporary files
+
+# Office temporary files
 ~$*
 *.tmp
