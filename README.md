@@ -18,7 +18,7 @@ The project evaluates classification performance and considers the trade-off bet
 - **Number of intent classes:** 77
 - **Total examples:** 13,083
 
-### Data partitions
+### Data Partitions
 
 | Partition | Examples | Purpose |
 |---|---:|---|
@@ -41,9 +41,9 @@ LoRA trained 1,081,344 parameters out of 495,114,112 total parameters, approxima
 
 Experiments were conducted in Google Colab using an NVIDIA Tesla T4 GPU with approximately 15 GB of reported GPU memory.
 
-The project uses Python and the PyTorch and Hugging Face ecosystems. Full fine-tuning used mixed precision, gradient checkpointing and an 8-bit AdamW optimizer to reduce memory requirements.
+The project uses Python, PyTorch, and the Hugging Face ecosystem. Full fine-tuning used mixed precision, gradient checkpointing, and an 8-bit AdamW optimizer to reduce memory requirements.
 
-Exact package versions and experiment settings should be checked against the final notebook before reproducing the runs.
+The `requirements.txt` file lists the main packages and versions used in the experimental environment. Consult the notebook for the implementation details and experiment settings.
 
 ## 5. Results
 
@@ -61,45 +61,49 @@ Full fine-tuning achieved the highest recorded test accuracy and macro-F1 in the
 
 ```text
 7043SCN-Task1-LLM-Finetuning/
-├── notebooks/
-│   └── Task1_LLM_Finetuning.ipynb
-├── results/
-│   ├── banking77_model_comparison.png
-│   ├── final_three_way_comparison.csv
-│   ├── experiment_summary.csv
-│   ├── baseline_test_predictions.csv
-│   ├── lora_test_predictions.csv
-│   ├── full_finetuning_test_predictions.csv
-│   └── additional metrics and prediction files
-├── src/
+├── Task1_LLM_Finetuning/
+│   ├── notebooks/
+│   │   └── Task1_LLM_Finetuning.ipynb
+│   └── results/
+│       ├── banking77_model_comparison.png
+│       ├── baseline_full_test.csv
+│       ├── baseline_preliminary.csv
+│       ├── baseline_test_predictions.csv
+│       ├── baseline_vs_lora_comparison.csv
+│       ├── experiment_summary.csv
+│       ├── final_three_way_comparison.csv
+│       ├── full_finetuning_test_predictions.csv
+│       ├── full_finetuning_test_summary.csv
+│       ├── lora_classification_report.csv
+│       ├── lora_incorrect_predictions.csv
+│       ├── lora_test_predictions.csv
+│       └── lora_test_summary.csv
 ├── README.md
 ├── requirements.txt
 └── .gitignore
 ```
 
-The `src/` directory is reserved for reusable Python scripts if they are separated from the notebook.
-
 ## 7. How to Reproduce the Experiments
 
 1. Clone this repository.
 2. Create and activate a Python environment.
-3. Install the dependencies listed in `requirements.txt`.
-4. Open `notebooks/Task1_LLM_Finetuning.ipynb` in Jupyter or Google Colab.
+3. Install the dependencies listed in `requirements.txt`, using a compatible GPU-enabled environment for fine-tuning.
+4. Open `Task1_LLM_Finetuning/notebooks/Task1_LLM_Finetuning.ipynb` in Jupyter or Google Colab.
 5. Obtain the Banking77 dataset from the source linked above.
-6. Follow the notebook sections for preprocessing, baseline evaluation, LoRA fine-tuning, full fine-tuning and final evaluation.
-7. Save generated predictions and evaluation results in the `results/` directory.
+6. Follow the notebook sections for preprocessing, baseline evaluation, LoRA fine-tuning, full fine-tuning, and final evaluation.
+7. Save generated predictions and evaluation results in the `Task1_LLM_Finetuning/results/` directory.
 
 GPU availability and sufficient memory are recommended for fine-tuning. Full fine-tuning may require the memory-saving settings documented in the notebook.
 
 ## 8. Results and Visualisation
 
-The `results/` directory contains saved predictions, evaluation summaries, classification reports and the model-comparison figure.
+The `Task1_LLM_Finetuning/results/` directory contains saved predictions, evaluation summaries, classification reports, and the model-comparison figure.
 
-The notebook is the primary record of the experimental workflow. Refer to it for the actual implementation and detailed settings.
+The notebook is the primary record of the experimental workflow. Refer to it for the implementation and detailed settings.
 
 ## 9. Limitations and Responsible Use
 
-This project evaluates a benchmark dataset and does not establish readiness for deployment in a real banking service. Incorrect intent predictions may route customer requests incorrectly. A real deployment would require privacy safeguards, error monitoring, suitable fallbacks and human oversight.
+This project evaluates a benchmark dataset and does not establish readiness for deployment in a real banking service. Incorrect intent predictions may route customer requests incorrectly. A real deployment would require privacy safeguards, error monitoring, suitable fallbacks, and human oversight.
 
 ## 10. References
 
@@ -108,4 +112,3 @@ This project evaluates a benchmark dataset and does not establish readiness for 
 - LoRA paper: https://openreview.net/forum?id=nZeVKeeFYf9
 - Qwen2.5 technical report: https://arxiv.org/abs/2412.15115
 - Task 1 repository: https://github.com/chandu22200427-cell/7043SCN-Task1-LLM-Finetuning
-
